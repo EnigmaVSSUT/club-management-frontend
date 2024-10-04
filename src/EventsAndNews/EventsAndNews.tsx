@@ -8,7 +8,7 @@ export default function EventsAndNews() {
     <Box
       sx={{
         minHeight: "100vh",
-        width: "100vw",
+        width: "auto",
         paddingBottom:"10px",
         paddingTop:"10px",
         backgroundColor: "#1E1E1E",

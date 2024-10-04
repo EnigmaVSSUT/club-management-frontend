@@ -22,6 +22,7 @@ import {
             background: "#1E1E1E",
             padding: "10px",
             boxShadow: 20,
+            position:"relative",
             transition: "background 0.3s",
             "&:hover": {
               background: "#252525",
@@ -65,7 +66,7 @@ import {
             <CardActions sx={{ justifyContent: "flex-end" }}>
               <Button
                 size="small"
-                sx={{ color: "#4285F4", borderColor: "white" }}
+                sx={{ color: "#4285F4", borderColor: "white",position:"absolute",bottom:"-20",right:"0px" }}
               >
                 23-12-2024 →
               </Button>

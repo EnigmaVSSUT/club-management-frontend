@@ -4,8 +4,7 @@ import {
   CardActions,
   CardContent,
   Typography,
-  Card,
-  IconButton,
+  Card, 
   Box,
 } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -50,9 +49,9 @@ export default function Middle() {
           >
             New
           </Typography>
-          <IconButton aria-label="person" sx={{ alignSelf: "center" }}>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <PersonOutlineIcon sx={{ color: "white", fontSize: "30px" }} />
-          </IconButton>
+          </Box>
           <Typography
             sx={{
               color: "white",
@@ -78,7 +77,7 @@ export default function Middle() {
         <CardActions
           sx={{ position: "absolute", right: "10px", bottom: "-5px" }}
         >
-          <Button size="small" sx={{ color: "#4285F4" }}>
+          <Button size="small" sx={{ color: "#4285F4" }} component="a">
             <Typography sx={{ fontSize: "10px" }}>Check Out</Typography>
           </Button>
         </CardActions>
@@ -113,9 +112,9 @@ export default function Middle() {
             textAlign: "center",
           }}
         >
-          <IconButton sx={{ alignSelf: "center" }}>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <NotificationsNoneIcon sx={{ color: "white", fontSize: "35px" }} />
-          </IconButton>
+          </Box>
           <Typography
             gutterBottom
             sx={{ color: "white", fontSize: "20px", paddingTop: "0px" }}
@@ -135,8 +134,9 @@ export default function Middle() {
               },
             }}
             size="small"
+            component="a"
           >
-            Learn More →
+            <span> Learn More →</span>
           </Button>
         </CardActions>
       </Card>

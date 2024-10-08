@@ -8,7 +8,6 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const ClubCard = ({ name, description, logo, members = 200 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  
   const chartData = [
     { name: "Members", members: 200, fill: "#ff4d4f" },
   ];
@@ -39,7 +38,7 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
           position: 'relative', 
         }}
       >
-           {isHovered && (
+        {isHovered && (
           <Typography variant="h6" style={{ marginBottom: '10px', fontWeight: 'bold' }}>
             {name}
           </Typography>
@@ -54,12 +53,11 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
               height: 100, 
               transition: 'opacity 0.3s ease',
               boxShadow: '0 4px 8px rgba(128, 128, 128, 0.5)', 
-              margin:30
+              margin: 30
             }}
           />
         )}
 
-     
         {isHovered && (
           <div style={{ width: '100px', height: '100px' }}>
             <RadialBarChart
@@ -74,9 +72,8 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
               startAngle={90}
               endAngle={450}
             >
-              <PolarGrid radialLines={false} />
+              <PolarGrid radialLines={false} stroke="none" />
               <PolarRadiusAxis tick={false} axisLine={false} />
-
               <RadialBar
                 dataKey="members"
                 cornerRadius={10} 
@@ -84,8 +81,6 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
                 background={false} 
                 stroke="none"
               />
-
-        
               <text
                 x={50} 
                 y={50} 
@@ -103,7 +98,6 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
           </div>
         )}
 
-        
         <div
           style={{
             display: 'flex',
@@ -113,12 +107,10 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
             marginTop: '10px',
           }}
         >
-       
           {!isHovered && (
             <Typography variant="body2">{description}</Typography>
           )}
 
-          
           {isHovered && (
             <Button
               variant="contained"
@@ -147,7 +139,3 @@ const ClubCard = ({ name, description, logo, members = 200 }) => {
 };
 
 export default ClubCard;
-
-
-
-

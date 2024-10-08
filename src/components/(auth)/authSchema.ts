@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 /*
 password must contain atleast 8 characters , one uppercase letter , one lowercase letter and one special character

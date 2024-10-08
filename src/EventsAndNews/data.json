@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Tech Conference 2024",
+      "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*GPhZRJyVpsqtVen-kA7kkg.jpeg",
+      "content": "Join us for the annual tech conference featuring the latest trends in technology .",
+      "date": "2024-10-12"
+    },
+    {
+      "title": "AI Expo",
+      "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*GPhZRJyVpsqtVen-kA7kkg.jpeg",
+      "content": "Explore cutting-edge developments in AI .",
+      "date": "2024-11-05"
+    },
+    {
+      "title": "Startup Pitch Night",
+      "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*GPhZRJyVpsqtVen-kA7kkg.jpeg",
+      "content": "Watch innovative startups pitch their ideas .",
+      "date": "2024-12-01"
+    },
+    {
+      "title": "Web Development Workshop",
+      "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*GPhZRJyVpsqtVen-kA7kkg.jpeg",
+      "content": "A hands-on workshop covering the latest trends in web development and design.",
+      "date": "2024-10-25"
+    }
+  ]

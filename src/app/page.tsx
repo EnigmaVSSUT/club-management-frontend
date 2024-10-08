@@ -1,4 +1,5 @@
 
+
 import ClubSection from "@/components/clubs/ClubSection";
 
 import CounterWrapper  from "@/components/clubs/about";
@@ -12,7 +13,7 @@ export default function Home()
  
     <CounterWrapper />
     <ClubSection />
-    
+   
     </>
   );
 }

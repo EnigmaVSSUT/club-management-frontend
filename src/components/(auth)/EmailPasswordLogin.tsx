@@ -25,7 +25,9 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
 
   useEffect(() => {
     reset();
-  },[authType , isAdmin]);
+  }, [authType, isAdmin, reset]);
+  
+  
 
   const schema = authType === 'sign-up' ? signupSchema : loginSchema;
   
@@ -39,7 +41,7 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
   });
 
   const [formInteracted, setFormInteracted] = useState(false); 
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  // const [formSubmitted, setFormSubmitted] = useState(false);
 
   async function onSubmit(data: FormData) {
     await new Promise<void>((resolve) => setTimeout(resolve,5000))

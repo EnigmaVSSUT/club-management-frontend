@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import ImageWithText from '@/components/Member/herosection';
+// import ImageWithText from '@/components/Member/herosection';
 import { Stack, Typography } from '@mui/material';
 
 import CardSection from '@/components/Member/ClubSection2';

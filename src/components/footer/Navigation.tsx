@@ -1,4 +1,4 @@
-import {Container, Box, Link} from "@mui/material"
+import {Container,  Link} from "@mui/material"
 
 interface AboutProps {
     Section_Url:string,

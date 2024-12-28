@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+
+import Image from 'next/image';
 interface CarouselProps {
   imagesArray: { src: string; caption: string }[];
   interval: number;
@@ -24,11 +26,13 @@ export default function Carousel({ imagesArray, interval }: CarouselProps) {
           className="absolute top-0 left-0 w-full h-full"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
         />
-        <img
-          src={imagesArray[currentIndex].src}
-          alt={`Slide ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
-        />
+         <Image
+    src={imagesArray[currentIndex].src}
+    alt={`Slide ${currentIndex + 1}`}
+    fill
+    style={{ objectFit: 'cover' }}
+    sizes="100vw"
+  />
         
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left p-4" style={{ zIndex: 1 }}>
           {/* Logo */}

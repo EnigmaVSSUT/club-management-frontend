@@ -1,7 +1,7 @@
 import React from 'react';
-import Carousel from '@/components/subComponents/herosection1'; 
+// import Carousel from '@/components/subComponents/herosection1'; 
 
-import { imagesArray } from '@/constants';
+// import { imagesArray } from '@/constants';
 import { profiles } from '@/constants';
 import CardSection from '@/components/subComponents/ClubSection2';
 

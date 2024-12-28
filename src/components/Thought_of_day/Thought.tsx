@@ -7,12 +7,13 @@ const Thought = ()=>{
             <Title Title_Content="Thought of the Day"/>
             
             <div className="w-full flex justify-center "> 
-                <div className=" flex flex-col items-end text-center font-semibold text-[#BDBDBD] w-fit text-[1.5vw] pt-[1.4vw]">
-                "The harder you work for something, the greater you’ll feel when you achieve it."
-                    <div className="text-[1.3vw]  text-right text-[#BDBDBD] w-fit pt-[0.4vw]">
-                    — Unknown
-                    </div>
-                </div>
+            <div className="flex flex-col items-end text-center font-semibold text-[#BDBDBD] w-fit text-[1.5vw] pt-[1.4vw]">
+  &quot;The harder you work for something, the greater you’ll feel when you achieve it.&quot;
+  <div className="text-[1.3vw] text-right text-[#BDBDBD] w-fit pt-[0.4vw]">
+    — Unknown
+  </div>
+</div>
+
             </div>
 
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Stack, TextField, InputAdornment, Typography, Button } from '@mui/material';
+import { Box, Stack, TextField, InputAdornment,  Button } from '@mui/material';
 import React, { useState , useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -8,7 +8,7 @@ import { loginSchema, signupSchema } from '@/validation/authSchema';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import PersonIcon from '@mui/icons-material/Person';
-import Right from '../Events and news/Components/Right';
+// import Right from '../Events and news/Components/Right';
 
 type FormData = {
   email: string;

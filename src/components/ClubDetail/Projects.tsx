@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
             <ProjectCard
               key={index}
               project={project}
-              style={styles.card}
+{/*               style={styles.card} */}
             />
           ))
         ) : (

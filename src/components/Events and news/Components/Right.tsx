@@ -6,7 +6,7 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Button,
+
 } from "@mui/material";
 
 export default function Right() {

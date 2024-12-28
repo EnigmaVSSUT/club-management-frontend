@@ -36,12 +36,14 @@ export default function Carousel({ imagesArray, interval }: CarouselProps) {
         
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left p-4" style={{ zIndex: 1 }}>
           {/* Logo */}
-          <img 
-            src="/enigma.jpg" 
-            alt="Logo" 
-            className="mb-4 rounded-full" // Circular logo
-            style={{ maxWidth: '80px', height: 'auto' }} // Adjusted logo size
-          />
+          <Image
+  src="/enigma.jpg"
+  alt="Logo"
+  className="mb-4 rounded-full" 
+  width={80}
+  height={80} 
+  style={{ objectFit: 'cover' }} 
+/>
           <h2 className="text-4xl md:text-5xl text-white font-poppins font-semibold py-2">
             ENIGMA
           </h2>

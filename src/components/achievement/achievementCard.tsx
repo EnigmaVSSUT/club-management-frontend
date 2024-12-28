@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Stack, Box, useMediaQuery, useTheme } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import PersonIcon from '@mui/icons-material/Person';
-import { moveCursor } from 'readline';
+// import { moveCursor } from 'readline';
 
 type Achievement = {
   image: string;

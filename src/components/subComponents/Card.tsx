@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 interface ProfileCardProps {
   name: string;
   title: string;
@@ -11,7 +11,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, title, department, imag
   return (
     <div style={styles.card}>
       <div style={styles.imageContainer}>
-        <img src={imageUrl} alt={`Profile picture of ${name}`} style={styles.image} />
+      <Image
+  src={imageUrl}
+  alt={`Profile picture of ${name}`}
+  width={200} 
+  height={200} 
+  style={styles.image}
+/>
       </div>
       <h2 style={styles.name}>{name}</h2>
       <p style={styles.title}>{title}</p>

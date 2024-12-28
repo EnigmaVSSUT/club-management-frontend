@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Stack, Box, Grid, Typography } from '@mui/material';
+import {  Box, Grid  } from '@mui/material';
 import FastFlipCounter from './Counter';
 
 export default function CounterWrapper() {

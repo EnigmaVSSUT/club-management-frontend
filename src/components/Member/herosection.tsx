@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Image } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
+import Image from 'next/image';
 
 interface ImageWithTextProps {
   imageUrl: string;
@@ -35,7 +36,6 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({ imageUrl, heading, paragr
     width: '75%',
   };
 
-  // State for dynamic font sizes
   const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({ fontSize: '28px', fontWeight: 600, fontFamily: 'Poppins , sans-serif' ,margin: '0' , lineHeight: '54px'});
   const [paragraphStyle, setParagraphStyle] = useState<React.CSSProperties>({ fontSize: '16px', margin: '0',fontWeight: 600, fontFamily: 'Poppins , sans-serif' , color: '#FFFFFF' });
 
@@ -54,21 +54,22 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({ imageUrl, heading, paragr
   };
 
   useEffect(() => {
-    updateStyles(); // Set initial styles
-    window.addEventListener('resize', updateStyles); // Update styles on resize
+    updateStyles(); 
+    window.addEventListener('resize', updateStyles); 
 
     return () => {
-      window.removeEventListener('resize', updateStyles); // Cleanup on unmount
+      window.removeEventListener('resize', updateStyles); 
     };
   }, []);
 
   return (
     <div style={containerStyle}>
       <Image 
-        src={imageUrl} 
-        fluid 
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-      />
+    src={imageUrl} 
+    alt="Description" 
+    fill 
+    style={{ objectFit: 'cover' }} 
+  />
       <div style={blackOverlayStyle} />
       <div style={textOverlayStyle}>
         <h2 style={headingStyle}>{heading}</h2>

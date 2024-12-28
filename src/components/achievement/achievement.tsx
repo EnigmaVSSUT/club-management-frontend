@@ -186,39 +186,39 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
 };
 
-// Additional media queries for responsiveness
-const mediaStyles = `
-@media (max-width: 768px) {
-  .searchContainer {
-    width: 80%;
-    padding-top: 20px;
-  }
-  .searchInput {
-    width: 90%;
-    font-size: 14px;
-  }
-  .pageButton {
-    width: 32px;
-    height: 32px;
-  }
-}
+// // Additional media queries for responsiveness
+// const mediaStyles = `
+// @media (max-width: 768px) {
+//   .searchContainer {
+//     width: 80%;
+//     padding-top: 20px;
+//   }
+//   .searchInput {
+//     width: 90%;
+//     font-size: 14px;
+//   }
+//   .pageButton {
+//     width: 32px;
+//     height: 32px;
+//   }
+// }
 
-@media (max-width: 480px) {
-  .searchContainer {
-    width: '100%';
-    height: 120px;
-    padding-top: 15px;
-  }
-  .searchInput {
-    width: '80%';
-    font-size: 14px;
-  }
-  .pageButton {
-    width: 28px;
-    height: 28px;
-  }
-}
-`;
+// @media (max-width: 480px) {
+//   .searchContainer {
+//     width: '100%';
+//     height: 120px;
+//     padding-top: 15px;
+//   }
+//   .searchInput {
+//     width: '80%';
+//     font-size: 14px;
+//   }
+//   .pageButton {
+//     width: 28px;
+//     height: 28px;
+//   }
+// }
+// `;
 
 
 

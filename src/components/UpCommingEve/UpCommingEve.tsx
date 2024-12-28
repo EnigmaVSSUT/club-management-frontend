@@ -41,8 +41,9 @@ const UpEve =()=>{
                         </div>
 
                         <div className="flex text-center justify-center text-[0.9vw] text-[#BDBDBD] px-[2.5vw] pt-[1.5vw]">
-                            Join us this December for SAMAVESH x VASSANT, VSSUT's exciting techno-cultural event filled with innovation, competitions, and performances that celebrate creativity and technical excellence!
-                        </div>
+  Join us this December for SAMAVESH x VASSANT, VSSUT&apos;s exciting techno-cultural event filled with innovation, competitions, and performances that celebrate creativity and technical excellence!
+</div>
+
                     </Hover>
                 </div>
 

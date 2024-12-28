@@ -4,9 +4,9 @@ import EmailPasswordLogin from './EmailPasswordLogin';
 import OtherLogin from './OtherLogin';
 
 function LoginDetails({ authType, setAuthType, isAdmin }: { authType: 'sign-in' | 'sign-up'; setAuthType: (type: 'sign-in' | 'sign-up') => void; isAdmin: boolean }) {
-  const handleSignUpClick = () => {
-    setAuthType('sign-up');
-  };
+  // const handleSignUpClick = () => {
+  //   setAuthType('sign-up');
+  // };
 
   return (
     <>

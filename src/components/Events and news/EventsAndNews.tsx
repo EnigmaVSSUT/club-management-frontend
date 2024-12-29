@@ -12,6 +12,7 @@ export default function EventsAndNews() {
         paddingBottom: "10px",
         paddingTop: "10px",
         backgroundColor: "#1E1E1E",
+
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -47,15 +48,54 @@ export default function EventsAndNews() {
           Stay Updated with the Latest Events and News
         </Typography>
       </Box>
-      <Box>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={12} sm={4}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyItems: "center",
+        }}
+      >
+        <Grid
+          container
+          spacing={0}
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "center", sm: "space-between" }, // Adjust spacing between items
+            alignItems: "center",
+            flexDirection: { xs: "column", sm: "column", md:"row" }, // Stack items vertically on small screens
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Left />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Middle />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Right />
           </Grid>
         </Grid>

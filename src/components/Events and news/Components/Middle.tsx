@@ -16,19 +16,20 @@ export default function Middle() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", sm: "column" },
+        flexDirection:"column", 
         justifyContent: "center",
         alignItems: "center",
-        gap: "10px",
+        gap: "20px", 
+        padding: "20px", 
       }}
     >
       {/* First Card */}
       <Card
         sx={{
-          width: { xs: "90%", sm: "400px" },
-          height: { xs: "auto", sm: "200px" },
+          width: { xs: "100%", sm: "400px", md: "350px", lg:"400px" }, 
+          height: "auto", 
           background: "#1E1E1E",
-          boxShadow: 10,
+          boxShadow: 4,
           position: "relative",
           transition: "background 0.3s",
           "&:hover": {
@@ -76,25 +77,35 @@ export default function Middle() {
           </Typography>
         </CardContent>
         <CardActions
-          sx={{ position: "absolute", right: "10px", bottom: "-1px" }}
+          sx={{
+            position: "absolute",
+            right: "10px",
+            bottom: {xs:"-5px",sm:"10px"},
+          }}
         >
-          <Typography sx={{ fontSize: "10px" , color:"#4285F4" , fontWeight:"400" }}>Check Out</Typography>
+          <Typography
+            sx={{
+              fontSize: "10px",
+              color: "#4285F4",
+              fontWeight: "400",
+            }}
+          >
+            Check Out
+          </Typography>
         </CardActions>
       </Card>
 
       {/* Second Card */}
       <Card
         sx={{
-          paddingTop: "20px",
           background: "#1E1E1E",
-          width: { xs: "90%", sm: "400px" },
-          height: { xs: "auto", sm: "180px" },
+          width: { xs: "100%", sm: "400px", md: "350px", lg:"400px" }, 
+          height: "auto",
           boxShadow: 20,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          justifyItems: "center",
           transition: "background 0.3s",
           "&:hover": {
             background: "#252525",
@@ -121,13 +132,18 @@ export default function Middle() {
             Notices, events, Recent News
           </Typography>
         </CardContent>
-        <CardActions sx={{ justifyContent: "center", marginTop: "auto" }}>
+        <CardActions
+          sx={{
+            justifyContent: "center",
+            marginTop: "auto",
+          }}
+        >
           <Typography
             sx={{
               background: "#4285F4",
               color: "white",
               padding: "6px 16px",
-              marginBottom: "50px",
+              borderRadius: "4px",
               "&:hover": {
                 background: "#357AE8",
               },

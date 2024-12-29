@@ -16,11 +16,11 @@ export default function Right() {
     >
       <Card
         sx={{
-          height: { xs: "auto", sm: "400px" },
-          width: { xs: "90%", sm: "400px" },
+          height: { xs: "auto", sm: "385px" },
+          width: { xs: "90%", sm: "400px" , md:"330px",lg:"400px" },
           borderRadius: "8px",
           background: "#1E1E1E",
-          padding: "10px",
+          padding: "10px ",
           boxShadow: 20,
           transition: "background 0.3s",
           "&:hover": {

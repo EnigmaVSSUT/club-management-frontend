@@ -132,7 +132,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#252525',
+    backgroundColor: '#1E1E1E',
     padding: '20px 0',
   },
   batchWrapper: {

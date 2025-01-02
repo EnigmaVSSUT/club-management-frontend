@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Stack, TextField, InputAdornment, Typography, Button } from '@mui/material';
+import { Box, Stack, TextField, InputAdornment,  Button } from '@mui/material';
 import React, { useState , useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -8,7 +8,7 @@ import { loginSchema, signupSchema } from '@/validation/authSchema';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import PersonIcon from '@mui/icons-material/Person';
-import Right from '../Events and news/Components/Right';
+// import Right from '../Events and news/Components/Right';
 
 type FormData = {
   email: string;
@@ -25,7 +25,9 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
 
   useEffect(() => {
     reset();
-  },[authType , isAdmin]);
+  }, [authType, isAdmin, reset]);
+  
+  
 
   const schema = authType === 'sign-up' ? signupSchema : loginSchema;
   
@@ -39,7 +41,7 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
   });
 
   const [formInteracted, setFormInteracted] = useState(false); 
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  // const [formSubmitted, setFormSubmitted] = useState(false);
 
   async function onSubmit(data: FormData) {
     await new Promise<void>((resolve) => setTimeout(resolve,5000))

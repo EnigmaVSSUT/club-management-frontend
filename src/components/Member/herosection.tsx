@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Image } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
+import Image from 'next/image';
 
 interface ImageWithTextProps {
   imageUrl: string;
@@ -32,43 +33,43 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({ imageUrl, heading, paragr
     color: 'white',
     textAlign: 'center',
     padding: '10px',
-    width: '90%',
+    width: '75%',
   };
 
-  // State for dynamic font sizes
-  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({ fontSize: '28px', fontWeight: 'bold', margin: '0' });
-  const [paragraphStyle, setParagraphStyle] = useState<React.CSSProperties>({ fontSize: '20px', margin: '0' });
+  const [headingStyle, setHeadingStyle] = useState<React.CSSProperties>({ fontSize: '28px', fontWeight: 600, fontFamily: 'Poppins , sans-serif' ,margin: '0' , lineHeight: '54px'});
+  const [paragraphStyle, setParagraphStyle] = useState<React.CSSProperties>({ fontSize: '16px', margin: '0',fontWeight: 600, fontFamily: 'Poppins , sans-serif' , color: '#FFFFFF' });
 
   // Function to update styles based on window size
   const updateStyles = () => {
     if (window.innerWidth < 600) {
-      setHeadingStyle({ fontSize: '15px', fontWeight: 'bold', margin: '0' });
-      setParagraphStyle({ fontSize: '10px', margin: '0' });
+      setHeadingStyle({ fontSize: '20px', fontWeight: 600, margin: '20px' , lineHeight: '54px'});
+      setParagraphStyle({ fontSize: '16px', margin: '0' , fontWeight: 600});
     } else if (window.innerWidth < 900) {
-      setHeadingStyle({ fontSize: '28px', fontWeight: 'bold', margin: '0' });
-      setParagraphStyle({ fontSize: '20px', margin: '0' });
+      setHeadingStyle({ fontSize: '32px', fontWeight: 600, margin: '20px' , lineHeight: '54px'});
+      setParagraphStyle({ fontSize: '16px', margin: '0' , fontWeight: 600});
     } else {
-      setHeadingStyle({ fontSize: '32px', fontWeight: 'bold', margin: '0' });
-      setParagraphStyle({ fontSize: '22px', margin: '0' });
+      setHeadingStyle({ fontSize: '36px', fontWeight: 600, margin: '30px' , lineHeight: '54px'});
+      setParagraphStyle({ fontSize: '16px', margin: '0' , fontWeight: 600});
     }
   };
 
   useEffect(() => {
-    updateStyles(); // Set initial styles
-    window.addEventListener('resize', updateStyles); // Update styles on resize
+    updateStyles(); 
+    window.addEventListener('resize', updateStyles); 
 
     return () => {
-      window.removeEventListener('resize', updateStyles); // Cleanup on unmount
+      window.removeEventListener('resize', updateStyles); 
     };
   }, []);
 
   return (
     <div style={containerStyle}>
       <Image 
-        src={imageUrl} 
-        fluid 
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-      />
+    src={imageUrl} 
+    alt="Description" 
+    fill 
+    style={{ objectFit: 'cover' }} 
+  />
       <div style={blackOverlayStyle} />
       <div style={textOverlayStyle}>
         <h2 style={headingStyle}>{heading}</h2>

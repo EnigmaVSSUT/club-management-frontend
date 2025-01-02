@@ -35,7 +35,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   container: {
     display: 'flex',
     justifyContent: 'center', // Center the card container
-    backgroundColor: '#252525',
+    backgroundColor: '#1E1E1E',
     padding: '20px 0', // Optional padding for spacing
   },
   cardContainer: {

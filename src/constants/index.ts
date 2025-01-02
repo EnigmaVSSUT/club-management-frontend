@@ -49,11 +49,11 @@ export const nonTechnicalClubs = [
 // Consider removing or updating for unique images
 export const imagesArray = [
   {
-    src: 'ClubPIC2.jpg',
+    src: '/ClubPIC2.jpg',
     caption: 'Explore all the clubs of your college',
   },
   {
-    src: 'anotherImage.jpg',
+    src: '/ClubPIC1.jpg',
     caption: 'Another caption for another image',
   },
 ];
@@ -219,37 +219,37 @@ export const profiles = [
     name: "Prof. Lorem Ipsum Manet",
     title: "Professor",
     department: "Lorem Engineering",
-    imageUrl: "enigma.jpg"
+    imageUrl: "/enigma.jpg"
   },
   // Add more unique profiles here
 ];
 
 // Profiles for web development context
 export const profiles1 = [
-  { name: "John Doe", title: "Coordinator", department: "Computer Science", imageUrl: "/profile1.jpg", batch: "2023" },
-  { name: "Jane Smith", title: "Assistant Coordinator", department: "Mechanical Engineering", imageUrl: "/profile2.jpg", batch: "2022" },
-  { name: "Alice Johnson", title: "Domain Lead", department: "Electrical Engineering", imageUrl: "/profile3.jpg", batch: "2023" },
-  { name: "Bob Brown", title: "Member", department: "Civil Engineering", imageUrl: "/profile4.jpg", batch: "2024" },
-  { name: "Emily Davis", title: "Domain Lead", department: "Chemical Engineering", imageUrl: "/profile5.jpg", batch: "2022" },
-  { name: "Michael Wilson", title: "Member", department: "Electronics", imageUrl: "/profile6.jpg", batch: "2023" },
-  { name: "Sarah Lee", title: "Member", department: "Biotechnology", imageUrl: "/profile7.jpg", batch: "2021" },
-  { name: "David Martinez", title: "Member", department: "Computer Science", imageUrl: "/profile8.jpg", batch: "2023" },
-  { name: "Laura Kim", title: "Member", department: "Mechanical Engineering", imageUrl: "/profile9.jpg", batch: "2023" },
-  { name: "James Anderson", title: "Domain Lead", department: "Electrical Engineering", imageUrl: "/profile10.jpg", batch: "2023" },
-  { name: "Jessica Taylor", title: "Member", department: "Civil Engineering", imageUrl: "/profile11.jpg", batch: "2024" },
-  { name: "William Thomas", title: "Member", department: "Chemical Engineering", imageUrl: "/profile12.jpg", batch: "2023" },
-  { name: "Sophia Jackson", title: "Coordinator", department: "Electronics", imageUrl: "/profile13.jpg", batch: "2022" },
-  { name: "Elijah White", title: "Domain Lead", department: "Biotechnology", imageUrl: "/profile14.jpg", batch: "2024" },
-  { name: "Grace Harris", title: "Member", department: "Computer Science", imageUrl: "/profile15.jpg", batch: "2022" },
-  { name: "Noah Lewis", title: "Member", department: "Mechanical Engineering", imageUrl: "/profile16.jpg", batch: "2021" },
-  { name: "Olivia Walker", title: "Member", department: "Electrical Engineering", imageUrl: "/profile17.jpg", batch: "2022" },
-  { name: "Lucas Hall", title: "Member", department: "Civil Engineering", imageUrl: "/profile18.jpg", batch: "2023" },
-  { name: "Amelia Allen", title: "Domain Lead", department: "Chemical Engineering", imageUrl: "/profile19.jpg", batch: "2023" },
-  { name: "Benjamin Young", title: "Member", department: "Electronics", imageUrl: "/profile20.jpg", batch: "2022" },
-  { name: "Mia Hernandez", title: "Domain Lead", department: "Biotechnology", imageUrl: "/profile21.jpg", batch: "2021" },
-  { name: "Daniel King", title: "Member", department: "Computer Science", imageUrl: "/profile22.jpg", batch: "2023" },
-  { name: "Aria Scott", title: "Member", department: "Mechanical Engineering", imageUrl: "/profile23.jpg", batch: "2024" },
-  { name: "Logan Hill", title: "Member", department: "Electrical Engineering", imageUrl: "/profile24.jpg", batch: "2022" },
+  { name: "John Doe", title: "Coordinator", department: "Computer Science", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Jane Smith", title: "Assistant Coordinator", department: "Mechanical Engineering", imageUrl: "/Alumn_2.webp", batch: "2022" },
+  { name: "Alice Johnson", title: "Domain Lead", department: "Electrical Engineering", imageUrl: "/Alumn_3.webp", batch: "2023" },
+  { name: "Bob Brown", title: "Member", department: "Civil Engineering", imageUrl: "/Alumn_1.webp", batch: "2024" },
+  { name: "Emily Davis", title: "Domain Lead", department: "Chemical Engineering", imageUrl: "/Alumn_1.webp", batch: "2022" },
+  { name: "Michael Wilson", title: "Member", department: "Electronics", imageUrl: "/Alumn_2.webp", batch: "2023" },
+  { name: "Sarah Lee", title: "Member", department: "Biotechnology", imageUrl: "/Alumn_3.webp", batch: "2021" },
+  { name: "David Martinez", title: "Member", department: "Computer Science", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Laura Kim", title: "Member", department: "Mechanical Engineering", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "James Anderson", title: "Domain Lead", department: "Electrical Engineering", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Jessica Taylor", title: "Member", department: "Civil Engineering", imageUrl: "/Alumn_1.webp", batch: "2024" },
+  { name: "William Thomas", title: "Member", department: "Chemical Engineering", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Sophia Jackson", title: "Coordinator", department: "Electronics", imageUrl: "/Alumn_1.webp", batch: "2022" },
+  { name: "Elijah White", title: "Domain Lead", department: "Biotechnology", imageUrl: "/Alumn_1.webp", batch: "2024" },
+  { name: "Grace Harris", title: "Member", department: "Computer Science", imageUrl: "/Alumn_1.webp", batch: "2022" },
+  { name: "Noah Lewis", title: "Member", department: "Mechanical Engineering", imageUrl: "/Alumn_1.webp", batch: "2021" },
+  { name: "Olivia Walker", title: "Member", department: "Electrical Engineering", imageUrl: "/Alumn_1.webp", batch: "2022" },
+  { name: "Lucas Hall", title: "Member", department: "Civil Engineering", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Amelia Allen", title: "Domain Lead", department: "Chemical Engineering", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Benjamin Young", title: "Member", department: "Electronics", imageUrl: "/Alumn_1.webp", batch: "2022" },
+  { name: "Mia Hernandez", title: "Domain Lead", department: "Biotechnology", imageUrl: "/Alumn_1.webp", batch: "2021" },
+  { name: "Daniel King", title: "Member", department: "Computer Science", imageUrl: "/Alumn_1.webp", batch: "2023" },
+  { name: "Aria Scott", title: "Member", department: "Mechanical Engineering", imageUrl: "/Alumn_1.webp", batch: "2024" },
+  { name: "Logan Hill", title: "Member", department: "Electrical Engineering", imageUrl: "/Alumn_1.webp", batch: "2022" },
 ];
 
 
@@ -265,4 +265,64 @@ export const batches = [
   '2022',
   '2021',
   '2020',
+];
+
+
+//sample achievement
+export const sampleAchievement = [{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+},
+{
+  image: '/enigma.jpg',
+  title: 'Annual Coding Marathon: A competitive programming event focused on algorithmic challenges.',
+  faculty: 'Prof. Sanjay Agrawal [Dean of Academic Affairs]',
+  date: 'Monday, 18th December 2023, 4:30 PM',
+  location: 'E-learning centre',
+}
 ];

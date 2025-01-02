@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import ImageWithText from '@/components/Member/herosection';
+// import ImageWithText from '@/components/Member/herosection';
 import { Stack, Typography } from '@mui/material';
 
 import CardSection from '@/components/Member/ClubSection2';
@@ -16,7 +16,7 @@ const Page: React.FC = () => {
           textAlign: 'center' 
         }}
       >
-        <ImageWithText 
+        {/* <ImageWithText 
           imageUrl="/ClubPIC1.jpg" 
           heading="Our Team Members" 
           paragraph={
@@ -28,16 +28,17 @@ const Page: React.FC = () => {
               The remaining members actively participate in various roles, including technical development, content creation, and logistics, contributing to the club&apos; projects and events.
             </>
           }
-        />
-       
+        /> */}
 
         <Typography 
           variant="h5" 
           sx={{ 
             color: '#fff', 
-            marginY: 2, 
+            // marginY: 2, 
             textAlign: 'center',
-            fontSize: { xs: '1.5rem', sm: '2rem' } 
+            fontSize: { xs: '1.5rem', sm: '2rem' }, 
+            fontFamily: 'Poppins , sans-serif',
+            fontWeight: 600
           }}
         >
           All Members

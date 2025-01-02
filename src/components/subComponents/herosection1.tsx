@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+
+import Image from 'next/image';
 interface CarouselProps {
   imagesArray: { src: string; caption: string }[];
   interval: number;
@@ -24,25 +26,29 @@ export default function Carousel({ imagesArray, interval }: CarouselProps) {
           className="absolute top-0 left-0 w-full h-full"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
         />
-        <img
-          src={imagesArray[currentIndex].src}
-          alt={`Slide ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
-        />
+         <Image
+    src={imagesArray[currentIndex].src}
+    alt={`Slide ${currentIndex + 1}`}
+    fill
+    style={{ objectFit: 'cover' }}
+    sizes="100vw"
+  />
         
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left p-4" style={{ zIndex: 1 }}>
           {/* Logo */}
-          <img 
-            src="enigma.jpg" 
-            alt="Logo" 
-            className="mb-4 rounded-full" // Circular logo
-            style={{ maxWidth: '80px', height: 'auto' }} // Adjusted logo size
-          />
-          <h2 className="text-4xl md:text-5xl text-white font-poppins">
-            Enigma
+          <Image
+  src="/enigma.jpg"
+  alt="Logo"
+  className="mb-4 rounded-full" 
+  width={80}
+  height={80} 
+  style={{ objectFit: 'cover' }} 
+/>
+          <h2 className="text-4xl md:text-5xl text-white font-poppins font-semibold py-2">
+            ENIGMA
           </h2>
           {/* Caption Text */}
-          <p className="font-poppins text-white text-base md:text-lg mt-2 pl-1 mb-4">
+          <p className="font-poppins text-base md:text-lg mt-2 pl-1 mb-4 font-semibold text-[#BDBDBD]">
             ENIGMA Club, the official web and coding club of VSSUT, Burla, <br/>
             is a student-driven hub for web development and programming.<br />
             It organizes workshops, hackathons, and coding competitions,<br />

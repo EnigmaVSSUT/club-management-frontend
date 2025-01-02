@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { passwordRegex usernameRegex } from '@/constants/index'
+import { passwordRegex, usernameRegex } from '@/constants/index'
 
 const signupSchema = z.object({
   username: z

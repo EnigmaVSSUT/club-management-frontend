@@ -28,7 +28,7 @@ export default function Left() {
             sx={{
               background: "#1E1E1E",
               height: "90px",
-              width: { xs: "90%", sm: "400px" },
+              width: { xs: "90%", sm: "400px" ,md:"330px",lg:"400px" },
               display: "flex",
               alignItems: "center",
               padding: "10px",

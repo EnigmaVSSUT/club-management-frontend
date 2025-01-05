@@ -19,17 +19,17 @@ const ClubCard = ({ name, description, logo,id, members = 200 }) => {
 
   return (
     <Card
-      style={{
+      sx={{
         backgroundColor: '#252525',
         color: '#ffffff',
         textAlign: 'center',
-        width: { xs: '90%', sm: '75%', md: '70%',lg:"65%" },
+        width: { xs: '90%', sm: '85%', md: '80%',lg:"80%" },
         maxWidth: '600px', 
         height: '318px', 
         transition: 'width 0.3s ease', 
         position: 'relative', 
         overflow: 'visible',
-        margin: '0 auto',
+        margin: { xs: '0 1rem', sm: '0 2rem', md: '0 1rem'},
         boxShadow: '0px 8px 15px 0px #00000040',
         borderRadius: '8px' ,
         display:"flex",

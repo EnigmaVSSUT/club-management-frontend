@@ -70,7 +70,7 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTec
 
       <Grid container spacing={2} sx={{ justifyContent: "center" , alignItems: 'center'}}>
         {(activeSection === 'technical' ? technicalClubs : nonTechnicalClubs).map((club, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12}  sm={6} md={4} key={index}>
             <ClubCardWrapper
               id={club.id}
               name={club.name}

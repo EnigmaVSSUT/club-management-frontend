@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid} from "@mui/material";
 import Left from "./Components/Left";
 import Right from "./Components/Right";
 import Middle from "./Components/Middle";
@@ -47,15 +47,15 @@ export default function EventsAndNews() {
           Stay Updated with the Latest Events and News
         </Typography>
       </Box>
-      <Box>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={12} sm={4}>
+      <Box sx={{ flexGrow: 1, padding: 2 }} >
+        <Grid container spacing={2} justifyContent="center" sx={{flexWrap: "wrap"}}>
+          <Grid item xs={12} sm={10}  md={5}>
             <Left />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={10}  md={5}>
             <Middle />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={10}  md={5}>
             <Right />
           </Grid>
         </Grid>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Box, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'; 
 
@@ -27,7 +27,7 @@ export default function FastFlipCounter({
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const startCounter = () => {
+    const startCounter = useCallback(() => {
         intervalRef.current = setInterval(() => {
             setCount((prevCount) => {
                 if (prevCount + skip >= totalCount) {
@@ -37,13 +37,13 @@ export default function FastFlipCounter({
                 return prevCount + skip;
             });
         }, 80);
-    };
+    }, [setCount,skip,totalCount])
 
     useEffect(() => {
         if (startAnimation) {
             startCounter();
         }
-    }, [startAnimation]);
+    }, [startAnimation,startCounter]);
 
     return (
         <Box

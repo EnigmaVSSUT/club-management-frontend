@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid} from "@mui/material";
 import Left from "./Components/Left";
 import Right from "./Components/Right";
 import Middle from "./Components/Middle";

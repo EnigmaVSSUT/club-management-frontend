@@ -11,7 +11,7 @@ const AlumniPfp: React.FC<AboutProps> = ({ imgUrl }) => {
         <div>
 
             <Image src={imgUrl}
-            className="w-[4vw] h-autorounded-[50%] "
+            className=" w-[8vw] sm:w-[4vw] h-autorounded-[50%] "
             width="0"
             height="0"
             sizes="100vw"

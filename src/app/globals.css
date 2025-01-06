@@ -8,6 +8,7 @@
 *{
   scroll-behavior: smooth !important;
   font-family: "Poppins";
+  scrollbar-width: none;
   }
 
 :root {

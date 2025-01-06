@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 const Footer = ()=>{
     return(
-        <Container disableGutters maxWidth={false} sx={{width:"100%", py:"4vw",px:"8vw", bgcolor:"#252525"}}>
+        <Container disableGutters maxWidth={false} sx={{width:"100%", px:"8vw",pb:"2vw",pt:"4vw", bgcolor:"#252525"}}>
 
             <Box >
                 
@@ -142,6 +142,7 @@ const Footer = ()=>{
 
                     sx={{
                         borderColor:"rgba(255,255,255,0.2)", 
+                        flexDirection:"Column",
                         display:"flex", 
                         justifyContent:"space-between",
                         alignItems:"baseline",         
@@ -154,9 +155,10 @@ const Footer = ()=>{
 
                     }}>
 
-                    <Box sx={{
+                    {/* <Box sx={{
                             display:"flex",
                             gap:"1.5vw",
+                            maxWidth:"400px",
                         }}>
                         <Box>
                             <Navigation Section_Url="/about" Link_Name="About"/>                           
@@ -170,18 +172,18 @@ const Footer = ()=>{
                             <Navigation Section_Url="#Top_section" Link_Name="Profile"/>     
                         </Box>
 
-                    </Box>
+                    </Box> */}
 
-                    <Box sx={{ display:"flex",alignItems:"flex-start",fontWeight:"regular",fontFamily:"Inter",fontSize:"1.7vw", pb:"10px", position:"absolute", left:"42%"}}>
+                    <Box sx={{ width:"100%",display:"flex",alignItems:"flex-start",fontWeight:"regular",fontFamily:"Inter",fontSize:"1.7vw", pb:"10px",justifyContent:"center"}}>
 
-                        <Box >MADE WITH</Box>
+                        <Box >MADE&nbsp;WITH</Box>
                         
                         <Box sx={{ color:"#34A853"}}>&nbsp;ENIGMA</Box>
 
                     </Box>
 
-                    <Box >
-                        <Box sx={{display:"flex"}}>
+                    <Box sx={{width:"100%"}}>
+                        <Box sx={{display:"flex", justifyContent:"center", mt:"4px"}}>
                             <Box sx={{mr:"0.5vw"}}>
                                 <Image
                                     src="/Copyright.svg"
@@ -192,7 +194,7 @@ const Footer = ()=>{
                                     className="w-[1.5vw] h-[auto]"
                                 />
                             </Box>
-                            <Box sx={{color:"#BDBDBD" }}>
+                            <Box sx={{color:"#BDBDBD",display:"flex",justifyContent:"center" }}>
                                 Copyright 2024, All Rights Reserved
                             </Box>
                         </Box>

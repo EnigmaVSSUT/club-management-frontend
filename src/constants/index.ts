@@ -25,10 +25,10 @@ export const images = [
 
 // Clubs information
 export const clubs = [
-  { name: 'E-cell', description: 'Techno-management club of VSSUT, Burla', logo: '/eecell.png' },
-  { name: 'Enigma', description: 'Official web and coding club of VSSUT, Burla', logo: '/enigma.jpg' },
-  { name: 'IEEE SB', description: 'Electronics and Electrical Society of VSSUT, Burla', logo: '/ieee.jpg' },
-  { name: 'Enigma', description: 'Official web and coding club of VSSUT, Burla', logo: '/enigma.jpg' },
+  { name: 'E-cell', description: 'Techno-management club of VSSUT, Burla', logo: '/eecell.png',id: '1' },
+  { name: 'Enigma', description: 'Official web and coding club of VSSUT, Burla', logo: '/enigma.jpg',id: '2' },
+  { name: 'IEEE SB', description: 'Electronics and Electrical Society of VSSUT, Burla', logo: '/ieee.jpg',id: '3' },
+  { name: 'Enigma', description: 'Official web and coding club of VSSUT, Burla', logo: '/enigma.jpg',id: '4' },
 
 
 ];

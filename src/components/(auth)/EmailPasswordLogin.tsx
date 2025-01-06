@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Stack, TextField, InputAdornment,  Button } from '@mui/material';
-import React, { useState , useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginSchema, signupSchema } from '@/validation/authSchema';
@@ -23,11 +23,6 @@ type AuthProps = {
 
 function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
 
-  useEffect(() => {
-    reset();
-  }, [authType, isAdmin, reset]);
-  
-  
 
   const schema = authType === 'sign-up' ? signupSchema : loginSchema;
   
@@ -40,7 +35,11 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
     },
   });
 
-  const [formInteracted, setFormInteracted] = useState(false); 
+  useEffect(() => {
+    reset();
+  }, [authType, isAdmin,reset]);
+
+  // const [formInteracted, setFormInteracted] = useState(false); 
   // const [formSubmitted, setFormSubmitted] = useState(false);
 
   async function onSubmit(data: FormData) {
@@ -50,7 +49,7 @@ function EmailPasswordLogin({ authType, isAdmin }: AuthProps) {
 
   const handleBlur = (fieldName: keyof FormData) => {
     
-    setFormInteracted(true);
+    // setFormInteracted(true);
     trigger(fieldName);  
   };
 

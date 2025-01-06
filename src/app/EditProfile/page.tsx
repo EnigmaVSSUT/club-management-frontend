@@ -1,6 +1,5 @@
 "use client";
-import { Card, Typography, TextField, Button, Box, Stack, Link, Container } from "@mui/material";
-import Avatar from '@mui/material/Avatar';
+import { TextField, Button, Box, Container } from "@mui/material";
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 import Image from "next/image";
@@ -21,7 +20,7 @@ const Edit_Profile = ()=>{
       Skills:"",
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
       setFormData({
         ...formData,

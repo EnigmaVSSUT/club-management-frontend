@@ -26,9 +26,9 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ clubs = []}) => {
         Clubs of VSSUT, Burla
       </Typography>
       <Box sx={{ padding: { xs: '1rem', sm: '2rem' }, backgroundColor: '#1E1E1E', color: '#ffffff', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={0} justifyContent="center">
           {clubs.map((club, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center', mt:"16px"}}>
               <ClubCardWrapper
                 name={club.name}
                 description={club.description}

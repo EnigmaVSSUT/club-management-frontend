@@ -69,6 +69,8 @@ export default function EventsAndNews() {
             item
             xs={12}
             sm={4}
+            md={4}
+            lg={4}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -80,6 +82,8 @@ export default function EventsAndNews() {
             item
             xs={12}
             sm={4}
+            md={4}
+            lg={4}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -91,6 +95,8 @@ export default function EventsAndNews() {
             item
             xs={12}
             sm={4}
+            md={4}
+            lg={4}
             sx={{
               display: "flex",
               justifyContent: "center",

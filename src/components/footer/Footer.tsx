@@ -174,7 +174,7 @@ const Footer = ()=>{
 
                     </Box> */}
 
-                    <Box sx={{ width:"100%",display:"flex",alignItems:"flex-start",fontWeight:"regular",fontFamily:"Inter",fontSize:"1.7vw", pb:"10px",justifyContent:"center"}}>
+                    <Box sx={{ width:"100%",display:"flex",alignItems:"flex-start",fontWeight:"regular",fontFamily:"Inter",fontSize:"1.7vw",  pb:"clamp(2px,0.8vw,10px)",justifyContent:"center"}}>
 
                         <Box >MADE&nbsp;WITH</Box>
                         

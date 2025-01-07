@@ -17,6 +17,7 @@ export default function Left() {
         flexDirection: "column",
         alignItems: "center",
         gap: "10px",
+        width:{xs:"300px",sm:"100%"}
       }}
     >
       {data.map((item, index) => {
@@ -26,7 +27,7 @@ export default function Left() {
             sx={{
               background: "#1E1E1E",
               height: "90px",
-              width: { xs: "90%", sm: "400px" ,md:"330px",lg:"400px" },
+              width: { xs: "85%", sm: "400px" ,md:"73%",lg:"73%" },
               display: "flex",
               alignItems: "center",
               padding: "10px",

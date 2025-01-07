@@ -12,12 +12,12 @@ import {
 export default function Right() {
   return (
     <Box
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center",width:{xs:"250px", sm:"350%"} }}
     >
       <Card
         sx={{
           height: { xs: "auto", sm: "385px" },
-          width: { xs: "90%", sm: "400px" , md:"330px",lg:"400px" },
+          width: { xs: "460px", sm: "400px" , md:"73%",lg:"73%" },
           borderRadius: "8px",
           background: "#1E1E1E",
           padding: "10px ",

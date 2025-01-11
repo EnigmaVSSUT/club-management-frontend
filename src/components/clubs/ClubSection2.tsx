@@ -1,5 +1,4 @@
-"use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Box, Grid } from '@mui/material';
 import ClubCardWrapper from './ClubCard';
 
@@ -7,20 +6,17 @@ interface Club {
   name: string;
   description: string;
   logo: string;
-  id:string
+  id: string;
 }
 
 interface ClubsSectionProps {
   technicalClubs: Club[];
   nonTechnicalClubs: Club[];
+  handleToggle: (section: 'technical' | 'nonTechnical') => void;
 }
 
-const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTechnicalClubs = [] }) => {
+const ClubsSection2: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTechnicalClubs = [], handleToggle }) => {
   const [activeSection, setActiveSection] = useState<'technical' | 'nonTechnical'>('technical');
-
-  const handleToggle = (section: 'technical' | 'nonTechnical') => {
-    setActiveSection(section);
-  };
 
   const buttonStyle = (isActive: boolean) => ({
     color: isActive ? '#ffffff' : '#424242',
@@ -47,12 +43,16 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTec
     },
   });
 
+  useEffect(() => {
+    handleToggle(activeSection);  
+  }, []);
+
   return (
-    <Box sx={{ paddingBlock: '2rem', backgroundColor: '#1E1E1E', color: '#ffffff'}}>
+    <Box sx={{ paddingBlock: '2rem', backgroundColor: '#1E1E1E', color: '#ffffff' }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }} gap={4}>
         <Button
           variant="text"
-          onClick={() => handleToggle('technical')}
+          onClick={() => setActiveSection('technical')}
           sx={buttonStyle(activeSection === 'technical')}
           disableRipple
         >
@@ -60,7 +60,7 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTec
         </Button>
         <Button
           variant="text"
-          onClick={() => handleToggle('nonTechnical')}
+          onClick={() => setActiveSection('nonTechnical')}
           sx={buttonStyle(activeSection === 'nonTechnical')}
           disableRipple
         >
@@ -68,9 +68,9 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTec
         </Button>
       </Box>
 
-      <Grid container spacing={2} sx={{ justifyContent: "center" , alignItems: 'center'}}>
+      <Grid container spacing={2} sx={{ justifyContent: 'center', alignItems: 'center' }}>
         {(activeSection === 'technical' ? technicalClubs : nonTechnicalClubs).map((club, index) => (
-          <Grid item xs={12}  sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
             <ClubCardWrapper
               id={club.id}
               name={club.name}
@@ -84,4 +84,4 @@ const ClubsSection: React.FC<ClubsSectionProps> = ({ technicalClubs = [], nonTec
   );
 };
 
-export default ClubsSection;
+export default ClubsSection2;

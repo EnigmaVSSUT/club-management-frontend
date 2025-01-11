@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLinkChange }) => {
   return (
     <nav className="navbar">
       <div className="container">
-        {['home', 'members', 'projects', 'achievements'].map(link => (
+        {['home', 'members', 'projects', 'achievements','events'].map(link => (
           <a
             key={link}
             href="#"

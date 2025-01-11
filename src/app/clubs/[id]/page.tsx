@@ -1,5 +1,6 @@
 "use client";
 import * as React from 'react';
+import {useEffect} from "react"
 import type { NextPage } from 'next';
 import Navbar from '@/components/Member/nav1';
 import Home from '@/components/ClubDetail/Home';
@@ -7,12 +8,17 @@ import Member from '@/components/ClubDetail/Member';
 import Projects from '@/components/ClubDetail/Projects';
 import ImageWithText from '@/components/Member/herosection';
 import Achievements from '@/components/achievement/achievement';
-import { imagesArray } from '@/constants';
+// import Events from '@/components/events/Events';
+import { imagesArray,fetchMembers,fetchAchievements } from '@/constants';
 import Carousel from '@/components/subComponents/herosection1';
 
 const ClubsDetails: NextPage = () => {
   const [activeLink, setActiveLink] = React.useState<string>('home');
 
+  useEffect(() => {
+    fetchMembers(); 
+    fetchAchievements();
+  }, []); 
   return (
     <>
       <div className="content">
@@ -42,6 +48,7 @@ const ClubsDetails: NextPage = () => {
         {activeLink === 'members' && <Member />}
         {activeLink === 'projects' && <Projects />}
         {activeLink === 'achievements' && <Achievements />}
+        {/* {activeLink === 'events' && <Events />} */}
       </div>
     </>
   );

@@ -1,15 +1,10 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography, Stack, Box, useMediaQuery, useTheme } from '@mui/material';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import PersonIcon from '@mui/icons-material/Person';
-// import { moveCursor } from 'readline';
+import { Card, CardMedia, CardContent, Typography, Box, useMediaQuery, useTheme } from '@mui/material';
 
 type Achievement = {
   image: string;
   title: string;
-  faculty: string;
-  date: string;
-  location: string;
+  description: string;
 };
 
 interface AchievementCardProps {
@@ -59,7 +54,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ event }) => {
           padding: isMobile ? 2 : 0,
         }}
       >
-        <CardContent sx={{ flex: '1 0 auto' , justifyContent: 'center' , alignItems: 'center'}}>
+        <CardContent sx={{ flex: '1 0 auto', justifyContent: 'center', alignItems: 'center' }}>
           <Typography
             variant="h6"
             sx={{
@@ -71,35 +66,17 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ event }) => {
             {event.title}
           </Typography>
 
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ marginTop: 1 }}>
-            <PersonIcon sx={{ color: '#BDBDBD', fontSize: 18 }} />
-            <Typography
-              variant="body2"
-              sx={{
-                color: '#BDBDBD',
-                fontWeight: 300,
-                fontSize: isMobile ? '11px' : '14px', 
-                fontFamily: 'Poppins',
-              }}
-            >
-              {event.faculty}
-            </Typography>
-          </Stack>
-
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ marginTop: 1 }}>
-            <CalendarTodayIcon sx={{ color: '#BDBDBD', fontSize: 18 }} />
-            <Typography
-              variant="body2"
-              sx={{
-                color: '#BDBDBD',
-                fontWeight: 300,
-                fontSize: isMobile ? '11px' : '14px', 
-                fontFamily: 'Poppins',
-              }}
-            >
-              {`${event.date} ${event.location}`}
-            </Typography>
-          </Stack>
+          <Typography
+            variant="body2"
+            sx={{
+              marginTop: 1,
+              color: '#BDBDBD',
+              fontSize: isMobile ? '12px' : '14px',
+              fontFamily: 'Poppins',
+            }}
+          >
+            {event.description}
+          </Typography>
         </CardContent>
       </Box>
     </Card>

@@ -21,12 +21,13 @@ export default function Middle() {
         alignItems: "center",
         gap: "20px", 
         padding: "20px", 
+        width:{xs:"300px",sm:"100%"}
       }}
     >
       {/* First Card */}
       <Card
         sx={{
-          width: { xs: "100%", sm: "400px", md: "350px", lg:"400px" }, 
+          width: { xs: "98%", sm: "400px", md: "99%", lg:"93%" },  
           height: "auto", 
           background: "#1E1E1E",
           boxShadow: 4,
@@ -99,7 +100,7 @@ export default function Middle() {
       <Card
         sx={{
           background: "#1E1E1E",
-          width: { xs: "100%", sm: "400px", md: "350px", lg:"400px" }, 
+          width: { xs: "98%", sm: "400px", md: "99%", lg:"93%" }, 
           height: "auto",
           boxShadow: 20,
           display: "flex",

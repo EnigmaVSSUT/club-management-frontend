@@ -10,7 +10,7 @@ const Alumni = () => {
         Insights and Experiences from Our Esteemed Alumni Community
       </SubTitle>
 
-      <div className="px-2 sm:px-10 mt-5 sm:mt-7">
+      <div className="sm:px-[4.6rem] px-[2rem] mt-5 sm:mt-7">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-[3.5vw] w-full">
           <AlumniCard
             Img_Url="/Alumn_1.webp"

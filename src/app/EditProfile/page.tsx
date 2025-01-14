@@ -7,10 +7,14 @@ import {
   Chip,
   IconButton,
 } from "@mui/material";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 import { Add as AddIcon } from "@mui/icons-material";
+import dayjs from "dayjs";
 
 const Edit_Profile = () => {
   const router = useRouter();
@@ -36,6 +40,15 @@ const Edit_Profile = () => {
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleYearChange = (date: dayjs.Dayjs | null) => {
+    if (date) {
+      setFormData({
+        ...formData,
+        GradYear: date.year().toString(),
+      });
+    }
   };
 
   const handleSkillInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,10 +88,22 @@ const Edit_Profile = () => {
       },
     },
     "& label.Mui-focused": {
-      // Added this style for label color when focused
+     
       color: "white",
     },
     mt: "10px",
+  };
+  const datePickerStyles = {
+    ...textFieldStyles,
+    "& .MuiInputBase-input": {
+      color: "white",
+    },
+    "& .MuiIconButton-root": {
+      color: "white",
+    },
+    "& .MuiPickersYear-yearButton": {
+      color: "black",
+    },
   };
 
   return (
@@ -193,15 +218,22 @@ const Edit_Profile = () => {
           </Box>
 
           <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Year of Graduation"
-              variant="outlined"
-              name="GradYear"
-              value={formData.GradYear}
-              onChange={handleChange}
-            />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                views={["year"]}
+                label="Enter Year of Graduation"
+                value={formData.GradYear ? dayjs(formData.GradYear) : null}
+                onChange={handleYearChange}
+                sx={datePickerStyles}
+                minDate={dayjs("2000-01-01")}
+                maxDate={dayjs("2050-12-31")}
+                slotProps={{
+                  textField: {
+                    fullWidth: true,
+                  },
+                }}
+              />
+            </LocalizationProvider>
           </Box>
         </Box>
 

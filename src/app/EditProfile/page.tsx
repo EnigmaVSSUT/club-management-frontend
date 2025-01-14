@@ -72,7 +72,6 @@ const Edit_Profile = () => {
       handleAddSkill();
     }
   };
-
   const textFieldStyles = {
     input: { color: "white" },
     label: { color: "white" },
@@ -88,11 +87,11 @@ const Edit_Profile = () => {
       },
     },
     "& label.Mui-focused": {
-     
       color: "white",
     },
     mt: "10px",
   };
+
   const datePickerStyles = {
     ...textFieldStyles,
     "& .MuiInputBase-input": {
@@ -120,137 +119,148 @@ const Edit_Profile = () => {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
+          alignItems: { xs: "center", md: "flex-start" },
+          gap: { xs: 2, md: 4 },
           py: "4vw",
-          flexWrap: "wrap",
-          alignItems: { xs: "center" },
+          px: { xs: 2, md: 4 },
+          maxWidth: "1400px",
+          mx: "auto",
         }}
       >
-        <Box sx={{ width: "100%", maxWidth: 500, mx: "25px" }}>
+        {/* Profile Image Section */}
+        <Box
+          sx={{
+            width: { xs: "100%", md: "30%" },
+            maxWidth: { xs: "500px", md: "none" },
+            flexShrink: 0,
+          }}
+        >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              px: "30px",
-              pt: "30px",
+              alignItems: "center",
+              p: 3,
+              backgroundColor: "rgba(42, 42, 42, 0.3)",
+              borderRadius: 2,
+            }}
+          >
+            <Image
+              src="/No_Profile.webp"
+              width="0"
+              height="0"
+              sizes="900px"
+              alt="Github_icon"
+              className="w-[clamp(150px,30vw,250px)] h-[auto] bg-slate-500 rounded-full"
+            />
+
+            <Box sx={{ width: "100%", mt: 3 }}>
+              <label htmlFor="select-image">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  component="span"
+                  fullWidth
+                  sx={{
+                    border: "2.7px #4285F4 solid",
+                    fontSize: "clamp(17px,1.4vw,30px)",
+                    borderRadius: "clamp(10px,1.1vw,45px)",
+                    textTransform: "capitalize",
+                    fontFamily: "poppins",
+                    fontWeight: "medium",
+                    color: "#FFFFFF",
+                    backgroundColor: "rgba(30,30,30,0.5)",
+                    ":hover": { backgroundColor: "rgba(66,133,244,0.15)" },
+                  }}
+                >
+                  Upload Image
+                </Button>
+              </label>
+              <input
+                accept="image/*"
+                type="file"
+                id="select-image"
+                style={{ display: "none" }}
+              />
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            width: { xs: "100%", md: "70%" },
+            maxWidth: { xs: "500px", md: "none" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "grid",
+              gap: 3,
             }}
           >
             <Box
-              sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+              sx={{
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                gap: 3,
+              }}
             >
-              <Image
-                src="/No_Profile.webp"
-                width="0"
-                height="0"
-                sizes="900px"
-                alt="Github_icon"
-                className="w-[clamp(150px,30vw,250px)] h-[auto] bg-slate-500 rounded-full"
+              <TextField
+                sx={textFieldStyles}
+                fullWidth
+                label="Enter Full Name"
+                variant="outlined"
+                name="FullName"
+                value={formData.FullName}
+                onChange={handleChange}
+              />
+              <TextField
+                sx={textFieldStyles}
+                fullWidth
+                label="Enter Club Name"
+                variant="outlined"
+                name="ClubName"
+                value={formData.ClubName}
+                onChange={handleChange}
               />
             </Box>
 
             <Box
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                mt: "20px",
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                gap: 3,
               }}
             >
-              <Box sx={{ width: "100%" }}>
-                <label htmlFor="select-image">
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    component="span"
-                    sx={{
-                      width: "100%",
-                      border: "2.7px #4285F4 solid",
-                      fontSize: "clamp(17px,1.4vw,30px)",
-                      borderRadius: "clamp(10px,1.1vw,45px)",
-                      px: "clamp(10px,5vw,30px)",
-                      textTransform: "capitalize",
-                      fontFamily: "poppins",
-                      fontWeight: "medium",
-                      color: "#FFFFFF",
-                      backgroundColor: "rgba(30,30,30,0.5)",
-                      ":hover": { backgroundColor: "rgba(66,133,244,0.15)" },
-                    }}
-                  >
-                    Upload Image
-                  </Button>
-                </label>
-              </Box>
-              <Box
-                sx={{ display: "flex", justifyContent: "center", mt: "10px" }}
-              >
-                <input
-                  accept="image/*"
-                  type="file"
-                  id="select-image"
-                  style={{ display: "none", width: "100px" }}
-                />
-              </Box>
-            </Box>
-          </Box>
-
-          <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Full Name"
-              variant="outlined"
-              name="FullName"
-              value={formData.FullName}
-              onChange={handleChange}
-            />
-          </Box>
-
-          <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Your Role"
-              variant="outlined"
-              name="Role"
-              value={formData.Role}
-              onChange={handleChange}
-            />
-          </Box>
-
-          <Box sx={{ mt: "10px" }}>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
-                views={["year"]}
-                label="Enter Year of Graduation"
-                value={formData.GradYear ? dayjs(formData.GradYear) : null}
-                onChange={handleYearChange}
-                sx={datePickerStyles}
-                minDate={dayjs("2000-01-01")}
-                maxDate={dayjs("2050-12-31")}
-                slotProps={{
-                  textField: {
-                    fullWidth: true,
-                  },
-                }}
+              <TextField
+                sx={textFieldStyles}
+                fullWidth
+                label="Enter Your Role"
+                variant="outlined"
+                name="Role"
+                value={formData.Role}
+                onChange={handleChange}
               />
-            </LocalizationProvider>
-          </Box>
-        </Box>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  views={["year"]}
+                  label="Enter Year of Graduation"
+                  value={formData.GradYear ? dayjs(formData.GradYear) : null}
+                  onChange={handleYearChange}
+                  sx={datePickerStyles}
+                  minDate={dayjs("2000-01-01")}
+                  maxDate={dayjs("2050-12-31")}
+                  slotProps={{
+                    textField: {
+                      fullWidth: true,
+                    },
+                  }}
+                />
+              </LocalizationProvider>
+            </Box>
 
-        <Box sx={{ width: "100%", maxWidth: 500, mx: "25px" }}>
-          <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Club Name"
-              variant="outlined"
-              name="ClubName"
-              value={formData.ClubName}
-              onChange={handleChange}
-            />
-          </Box>
-
-          <Box sx={{ mt: "10px" }}>
             <TextField
               sx={textFieldStyles}
               fullWidth
@@ -260,16 +270,8 @@ const Edit_Profile = () => {
               value={formData.Domain}
               onChange={handleChange}
             />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              maxWidth: 500,
-              mt: "10px",
-            }}
-          >
-            <Box sx={{ width: "100%", position: "relative" }}>
+
+            <Box>
               <TextField
                 sx={textFieldStyles}
                 fullWidth
@@ -289,68 +291,57 @@ const Edit_Profile = () => {
                   ),
                 }}
               />
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2 }}>
+                {skills.map((skill, index) => (
+                  <Chip
+                    key={index}
+                    label={skill}
+                    onDelete={() => handleDeleteSkill(skill)}
+                    sx={{
+                      backgroundColor: "rgba(66,133,244,0.15)",
+                      color: "white",
+                      borderRadius: "16px",
+                      "& .MuiChip-deleteIcon": {
+                        color: "white",
+                        "&:hover": {
+                          color: "#ff4444",
+                        },
+                      },
+                    }}
+                  />
+                ))}
+              </Box>
             </Box>
+
             <Box
               sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 1,
-                mt: 2,
-                width: "100%",
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                gap: 3,
               }}
             >
-              {skills.map((skill, index) => (
-                <Chip
-                  key={index}
-                  label={skill}
-                  onDelete={() => handleDeleteSkill(skill)}
-                  sx={{
-                    backgroundColor: "rgba(66,133,244,0.15)",
-                    color: "white",
-                    borderRadius: "16px",
-                    "& .MuiChip-deleteIcon": {
-                      color: "white",
-                      "&:hover": {
-                        color: "#ff4444",
-                      },
-                    },
-                  }}
-                />
-              ))}
+              <TextField
+                sx={textFieldStyles}
+                fullWidth
+                label="Enter Github Link"
+                variant="outlined"
+                name="Github"
+                value={formData.Github}
+                onChange={handleChange}
+              />
+              <TextField
+                sx={textFieldStyles}
+                fullWidth
+                label="Enter Linkedin id"
+                variant="outlined"
+                name="Linkedin"
+                value={formData.Linkedin}
+                onChange={handleChange}
+              />
             </Box>
           </Box>
 
-          <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Github Link"
-              variant="outlined"
-              name="Github"
-              value={formData.Github}
-              onChange={handleChange}
-            />
-          </Box>
-
-          <Box sx={{ mt: "10px" }}>
-            <TextField
-              sx={textFieldStyles}
-              fullWidth
-              label="Enter Linkedin id"
-              variant="outlined"
-              name="Linkedin"
-              value={formData.Linkedin}
-              onChange={handleChange}
-            />
-          </Box>
-
-          <Box
-            sx={{
-              mt: "10px",
-              display: "flex",
-              justifyContent: { xs: "center", lg: "flex-start" },
-            }}
-          >
+          <Box sx={{ mt: 4, display: "flex", justifyContent: "center" }}>
             <Button
               variant="contained"
               color="success"

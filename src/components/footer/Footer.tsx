@@ -2,7 +2,7 @@ import {Container, Box, Link} from "@mui/material"
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
-import Navigation from "./Navigation"
+
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false

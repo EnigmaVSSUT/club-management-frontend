@@ -104,158 +104,59 @@ export const imagesArray = [
   },
 ];
 //sample projects
-export const sampleProjects = [
-  {
-    name: "Project Alpha",
-    domain: "Web Development",
-    description: "A web application built with React and Node.js.",
-    dates: "Jan 2023 - March 2023",
-  },
-  {
-    name: "Project Beta",
-    domain: "Mobile App",
-    description: "A mobile app developed using Flutter.",
-    dates: "April 2023 - June 2023",
-  },
-  {
-    name: "Project Gamma",
-    domain: "Machine Learning",
-    description: "A machine learning model for predicting sales.",
-    dates: "July 2023 - September 2023",
-  },
-  {
-    name: "Project Delta",
-    domain: "Data Science",
-    description: "A data analysis project using Python and Pandas.",
-    dates: "October 2023 - December 2023",
-  },
-  {
-    name: "Project Epsilon",
-    domain: "Blockchain",
-    description: "A data analysis project using Python and Pandas.",
-    dates: "January 2024 - March 2024",
-  },
-  {
-    name: "Project Zeta",
-    domain: "Cybersecurity",
-    description: "A security framework for protecting web applications.",
-    dates: "February 2023 - May 2023",
-  },
-  {
-    name: "Project Eta",
-    domain: "Augmented Reality",
-    description: "An AR app for interactive education experiences.",
-    dates: "June 2023 - August 2023",
-  },
-  {
-    name: "Project Theta",
-    domain: "Game Development",
-    description: "A multiplayer game developed using Unity.",
-    dates: "September 2023 - November 2023",
-  },
-  {
-    name: "Project Iota",
-    domain: "IoT",
-    description: "An IoT solution for smart home automation.",
-    dates: "December 2023 - February 2024",
-  },
-  {
-    name: "Project Kappa",
-    domain: "Cloud Computing",
-    description: "A cloud-based service for data storage and retrieval.",
-    dates: "March 2024 - May 2024",
-  },
-  {
-    name: "Project Lambda",
-    domain: "DevOps",
-    description: "Automated deployment pipeline for microservices.",
-    dates: "April 2023 - June 2023",
-  },
-  {
-    name: "Project Mu",
-    domain: "Natural Language Processing",
-    description: "A chatbot application using NLP techniques.",
-    dates: "July 2023 - September 2023",
-  },
-  {
-    name: "Project Nu",
-    domain: "Mobile App",
-    description: "A fitness tracking app for health enthusiasts.",
-    dates: "October 2023 - December 2023",
-  },
-  {
-    name: "Project Xi",
-    domain: "E-commerce",
-    description: "An online store built with React and Node.js.",
-    dates: "January 2024 - March 2024",
-  },
-  {
-    name: "Project Omicron",
-    domain: "Virtual Reality",
-    description: "A VR experience for immersive gaming.",
-    dates: "February 2024 - April 2024",
-  },
-  {
-    name: "Project Pi",
-    domain: "Artificial Intelligence",
-    description: "An AI-based recommendation system.",
-    dates: "March 2023 - June 2023",
-  },
-  {
-    name: "Project Rho",
-    domain: "Big Data",
-    description: "Data processing framework using Apache Spark.",
-    dates: "July 2023 - September 2023",
-  },
-  {
-    name: "Project Sigma",
-    domain: "Web Development",
-    description: "A responsive website for a local business.",
-    dates: "October 2023 - November 2023",
-  },
-  {
-    name: "Project Tau",
-    domain: "Social Media",
-    description: "A platform for sharing multimedia content.",
-    dates: "December 2023 - February 2024",
-  },
-  {
-    name: "Project Upsilon",
-    domain: "Health Tech",
-    description: "An app for remote patient monitoring.",
-    dates: "January 2024 - March 2024",
-  },
-  {
-    name: "Project Phi",
-    domain: "FinTech",
-    description: "A personal finance management tool.",
-    dates: "February 2023 - April 2023",
-  },
-  {
-    name: "Project Chi",
-    domain: "Education",
-    description: "An online learning platform for students.",
-    dates: "May 2023 - July 2023",
-  },
-  {
-    name: "Project Psi",
-    domain: "Real Estate",
-    description: "A property management system for landlords.",
-    dates: "August 2023 - October 2023",
-  },
-  {
-    name: "Project Omega",
-    domain: "Travel Tech",
-    description: "A travel planning app for easy itinerary management.",
-    dates: "November 2023 - January 2024",
-  },
-  {
-    name: "Project Zeta Plus",
-    domain: "Robotics",
-    description: "A robotic arm for automation in manufacturing.",
-    dates: "February 2024 - April 2024",
-  },
-];
+// export const sampleProjects = [
+//   {
+//     name: "Project Alpha",
+//     domain: "Web Development",
+//     description: "A web application built with React and Node.js.",
+//     dates: "Jan 2023 - March 2023",
+//   },
+//   {
+//     name: "Project Zeta Plus",
+//     domain: "Robotics",
+//     description: "A robotic arm for automation in manufacturing.",
+//     dates: "February 2024 - April 2024",
+//   },
+// ];
+
+interface Project {
+  _id: string;
+  name: string;
+  domain: string;
+  description: string;
+  dates: string; 
+}
+
+export let sampleProjects: Project[] = [];
+
+export async function fetchProjects(): Promise<void> {
+  console.log("Fetching projects...");
+
+  try {
+    const res = await axios.get<{ data: Project[] }>(
+      "https://club-management-backend.onrender.com/api/v1/projects/getAllProjects"
+    );
+
+    const result = res.data.data;
+
+    console.log("API response from Project:", res);
+    console.log("Retrieved data from project:", result);
+
+
+    sampleProjects = result.map((project) => ({
+      _id: project._id,
+      name: project.name,
+      domain: project.domain,
+      description: project.description,
+      dates: project.dates, 
+    }));
+
+    console.log("Processed projects:", sampleProjects);
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+  }
+}
+
 
 
 
@@ -414,6 +315,93 @@ export async function fetchAchievements(): Promise<void> {
   }
 }
 
+//events
+// export const sampleEvents = [
+//   {
+//     image: "https://via.placeholder.com/200",
+//     title: "Tech Summit 2025",
+//     faculty: "Dr. Jane Smith",
+//     date: "2025-03-15",
+//     location: "Auditorium A",
+//   },
+//   {
+//     image: "https://via.placeholder.com/200",
+//     title: "AI Workshop",
+//     faculty: "Prof. John Doe",
+//     date: "2025-04-20",
+//     location: "Lab 5, Tech Campus",
+//   },
+//   {
+//     image: "https://via.placeholder.com/200",
+//     title: "Robotics Expo",
+//     faculty: "Dr. Sarah Lee",
+//     date: "2025-05-10",
+//     location: "Main Hall",
+//   },
+//   {
+//     image: "https://via.placeholder.com/200",
+//     title: "Coding Hackathon",
+//     faculty: "Mr. Adam White",
+//     date: "2025-06-25",
+//     location: "Computer Science Block",
+//   },
+// ];
+
+
+
+
+
+interface Event {
+  _id: string;
+  image: string;
+  name: string;
+  faculty: string;
+  date: string;
+  venue: string;
+}
+
+export let sampleEvents: Event[] = [];
+
+export async function fetchEvents(): Promise<void> {
+  console.log("Fetching events...");
+
+  try {
+    const res = await axios.get<{ data: { data: Event[] } }>(
+      "https://club-management-backend.onrender.com/api/v1/events/upcoming"
+    );
+
+    // Debugging: Log the whole response structure to verify its structure
+    console.log("API response from events:", res);
+
+    // Check if 'res.data.data' is indeed an array
+    const result = Array.isArray(res.data.data) ? res.data.data : [];
+
+    console.log("Retrieved data from events:", result);
+
+    // Mapping and formatting date to 'YYYY-MM-DD'
+    sampleEvents = result.map((event) => {
+      const formattedDate = new Date(event.date).toLocaleDateString("en-IN", {
+        year: "numeric",
+        month: "2-digit", 
+        day: "2-digit", 
+        timeZone: "Asia/Kolkata", 
+      });
+
+      return {
+        _id: event._id,
+        image: "https://placehold.co/400", // placeholder image
+        name: event.name,
+        faculty: event.faculty || "Faculty Advisor Name", // default value if faculty is empty
+        date: formattedDate, // formatted date
+        venue: event.venue,
+      };
+    });
+
+    console.log("Processed events:", sampleEvents);
+  } catch (error) {
+    console.error("Error fetching events:", error);
+  }
+}
 
 
 

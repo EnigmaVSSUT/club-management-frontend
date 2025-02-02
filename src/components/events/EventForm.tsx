@@ -2,13 +2,11 @@ import axios from "axios";
 import { Card, Typography, TextField, Button, Box } from "@mui/material";
 import { useState } from "react";
 
-export default function AchievementForm() {
+export default function EventForm() {
   const [formData, setFormData] = useState({
     header: "",
     description: "",
     clubId: "",
-    Image:"",
-    date:""
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,12 +27,10 @@ export default function AchievementForm() {
           header: formData.header,
           description: formData.description,
           clubId: formData.clubId,
-          Image:formData.Image,
-          date:formData.date
         },
         {
           headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzgyMDI3YTAzMjM0ZTBkMmNkZmNkZWMiLCJpYXQiOjE3MzY2MDU0ODgsImV4cCI6MTczNjYwOTA4OH0.F10E_LniWcGdxhXN5fD8uLDrcy_TKMoR-mi2TUfLzO8",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzdjMjMxYzBhNWZhYmU3YzQ4OTNmZTUiLCJpYXQiOjE3MzY1NzE0OTIsImV4cCI6MTczNjU3NTA5Mn0.-vHMoOrHElf-WAuFaA06rAmNNy_pZsrDGxcvThDk2zg",
             "Content-Type": "application/json",
           },
           withCredentials: true, 
@@ -43,7 +39,7 @@ export default function AchievementForm() {
 
       console.log("Response:", response.data);
       alert("Achievement created successfully!");
-      setFormData({ header: "", description: "", clubId: "" ,Image:"",date:""}); 
+      setFormData({ header: "", description: "", clubId: "" }); // Reset form after success
     } catch (error) {
       console.error("Error creating achievement:", error);
       alert("Failed to create achievement.");
@@ -120,29 +116,6 @@ export default function AchievementForm() {
           variant="outlined"
           name="clubId"
           value={formData.clubId}
-          onChange={handleChange}
-        />
-        <TextField
-          sx={{
-            input: { color: "white" },
-            label: { color: "white" },
-            "& .MuiOutlinedInput-root": {
-              "& fieldset": {
-                borderColor: "#2A2A2A",
-              },
-              "&:hover fieldset": {
-                borderColor: "#0360BC",
-              },
-              "&.Mui-focused fieldset": {
-                borderColor: "#0360BC",
-              },
-            },
-          }}
-          fullWidth
-          label="Enter Date"
-          variant="outlined"
-          name="date"
-          value={formData.date}
           onChange={handleChange}
         />
 
